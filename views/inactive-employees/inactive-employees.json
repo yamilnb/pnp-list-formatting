@@ -1,0 +1,129 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/row-formatting.schema.json",
+  "hideSelection": true,
+  "hideListHeader": true,
+  "rowFormatter": {
+    "elmType": "div",
+    "style": {
+      "height": "68px",
+      "margin-bottom": "6px",
+      "max-width": "480px",
+      "min-width": "206px",
+      "display": "flex",
+      "flex-flow": "row",
+      "padding": "2px",
+      "box-sizing": "border-box",
+      "justify-content": "flex-start",
+      "align-items": "center",
+      "border-radius": "2px",
+      "box-shadow": "rgba(0, 0, 0, 0) 0px 0px"
+    },
+    "attributes": {
+      "class": "ms-Stack ms-card"
+    },
+    "children": [
+      {
+        "elmType": "div",
+        "attributes": {
+          "class": "ms-Stack ms-CardSection"
+        },
+        "style": {
+          "display": "flex",
+          "flex-flow": "column",
+          "width": "100%",
+          "height": "auto",
+          "box-sizing": "border-box",
+          "-webkit-font-smoothing": "antialiased",
+          "font-size": "18px",
+          "font-weight": "400",
+          "margin": "0px",
+          "padding": "10px",
+          "vertical-align": "center"
+        },
+        "children": [
+          {
+            "elmType": "span",
+            "attributes": {
+              "class": "fui-Text"
+            },
+            "style": {
+              "margin-bottom": "5px",
+              "max-height": "38px",
+              "display": "inline",
+              "font-size": "14px",
+              "font-weight": "600",
+              "line-height": "20px"
+            },
+            "txtContent": "[$Colaborador.title]"
+          },
+          {
+            "elmType": "div",
+            "style": {
+              "display": "flex",
+              "flex-flow": "column",
+              "width": "auto",
+              "height": "auto",
+              "box-sizing": "border-box",
+              "-webkit-font-smoothing": "antialiased",
+              "font-size": "18px",
+              "font-weight": "400",
+              "margin": "0px",
+              "padding": "0px"
+            },
+            "children": [
+              {
+                "elmType": "span",
+                "style": {
+                  "font-size": "12px",
+                  "font-weight": "600",
+                  "line-height": "16px"
+                },
+                "txtContent": {
+                  "operator": "+",
+                  "operands": [
+                    "Motivo: ",
+                    "[$Motivo]"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "style": {
+              "display": "flex",
+              "flex-flow": "column",
+              "width": "auto",
+              "height": "auto",
+              "box-sizing": "border-box",
+              "-webkit-font-smoothing": "antialiased",
+              "font-size": "18px",
+              "font-weight": "400",
+              "margin": "0px",
+              "padding": "0px"
+            },
+            "children": [
+              {
+                "elmType": "span",
+                "style": {
+                  "font-size": "12px",
+                  "font-weight": "600",
+                  "line-height": "16px"
+                },
+                "txtContent": {
+                  "operator": "+",
+                  "operands": [
+                    "Fecha: ",
+                    "=toLocaleDateString([$Inicio])",
+                    " - ",
+                    "=toLocaleDateString([$Fin])"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
